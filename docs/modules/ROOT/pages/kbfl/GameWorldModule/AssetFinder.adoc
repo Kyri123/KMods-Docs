@@ -28,13 +28,13 @@ This functionality is by default: **Disabled**
 |The Path where we scan for the Assets (This need to be valid) Tip: the path for your mod begins with `/<modref>/` for example `/KBFL/`
 
 |`Recursive`
-|Enable the scan recursive in the directory. (Find all Assets in sub directory)
+|Enable the scan recursive in the directory. (Find all Assets in subdirectory)
 
 |`Register Schematics`
-|Enable the function to automatic register Recipes.
+|Enable the function to automatic register Schematics.
 
 |`Register Research Trees`
-|Enable the function to automatic register Recipes.
+|Enable the function to automatic register Research Trees.
 
 |`Register Recipes`
 |Enable the function to automatic register Recipes.
