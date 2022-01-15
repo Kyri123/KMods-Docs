@@ -19,6 +19,7 @@
 *** xref:kbfl/GameWorldModule/howto.adoc[Use KBFL GameWorldModule]
 *** xref:kbfl/GameWorldModule/ada.adoc[ADA Helper]
 *** xref:kbfl/GameWorldModule/enodes.adoc[Easy Nodes]
+*** xref:kbfl/GameWorldModule/AssetFinder.adoc[Asset Finder]
 *** CDO Helper
 **** xref:kbfl/GameWorldModule/CDO/Stacks.adoc[Item Stacks]
 **** xref:kbfl/GameWorldModule/CDO/Recipe.adoc[Recipe]
