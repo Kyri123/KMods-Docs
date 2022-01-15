@@ -1,0 +1,217 @@
+= Kyris Blueprint Function library
+== Basics
+
+Welcome to the KBFL Docs!
+
+Here can you find all Information about functions and utils from this Library!
+
+- Latest docs version:  https://gitlab.kmods.de/Kyrium/KBFL/-/releases[1.9.2]
+- Github (Gitlab): https://gitlab.kmods.de/Kyrium/KBFL[https://gitlab.kmods.de/Kyrium/KBFL]
+- Mod padge: https://ficsit.app/mod/DM5DnSogEL6j74[https://ficsit.app/mod/DM5DnSogEL6j74]
+- Latest supported SML: **3.3.0**
+- Satisfactory: **Update 5**
+- Discord: https://discord.gg/JsJ9XXWS7Q[KMods Discord]
+
+== Information
+
+- these mods add many new functions for blueprint also a new GameWorldModule with many functions
+- these makes many things loot easier to add like
+- Resource Nodes with ResourceNodeDescriptors
+- CDO with CDO Helpers
+- & add swatches with predefined colors in the Customizer System
+- and much more
+
+== Current using AccessTransformers
+
+```AccessTransformers.ini
+[AccessTransformers]
+Accessor=(Class="AFGFactoryBuildingHologram", Property="mMaxZoopAmount")
+
+Accessor=(Class="UFGRecipe", Property="mDisplayNameOverride")
+Accessor=(Class="UFGRecipe", Property="mDisplayName")
+Accessor=(Class="UFGRecipe", Property="mIngredients")
+Accessor=(Class="UFGRecipe", Property="mProduct")
+Accessor=(Class="UFGRecipe", Property="mOverriddenCategory")
+Accessor=(Class="UFGRecipe", Property="mManufacturingMenuPriority")
+Accessor=(Class="UFGRecipe", Property="mManufactoringDuration")
+Accessor=(Class="UFGRecipe", Property="mManualManufacturingMultiplier")
+Accessor=(Class="UFGRecipe", Property="mProducedIn")
+Accessor=(Class="UFGRecipe", Property="mRelevantEvents")
+Accessor=(Class="UFGRecipe", Property="mVariablePowerConsumptionConstant")
+Accessor=(Class="UFGRecipe", Property="mVariablePowerConsumptionFactor")
+
+Accessor=(Class="UFGItemDescriptor", Property="mUseDisplayNameAndDescription")
+Accessor=(Class="UFGItemDescriptor", Property="mDisplayName")
+Accessor=(Class="UFGItemDescriptor", Property="mDescription")
+Accessor=(Class="UFGItemDescriptor", Property="mAbbreviatedDisplayName")
+Accessor=(Class="UFGItemDescriptor", Property="mStackSize")
+Accessor=(Class="UFGItemDescriptor", Property="mCanBeDiscarded")
+Accessor=(Class="UFGItemDescriptor", Property="mRememberPickUp")
+Accessor=(Class="UFGItemDescriptor", Property="mEnergyValue")
+Accessor=(Class="UFGItemDescriptor", Property="mRadioactiveDecay")
+Accessor=(Class="UFGItemDescriptor", Property="mForm")
+Accessor=(Class="UFGItemDescriptor", Property="mSmallIcon")
+Accessor=(Class="UFGItemDescriptor", Property="mPersistentBigIcon")
+Accessor=(Class="UFGItemDescriptor", Property="mConveyorMesh")
+Accessor=(Class="UFGItemDescriptor", Property="mPreviewView")
+Accessor=(Class="UFGItemDescriptor", Property="mItemCategory")
+Accessor=(Class="UFGItemDescriptor", Property="mFluidColor")
+Accessor=(Class="UFGItemDescriptor", Property="mGasColor")
+
+Accessor=(Class="UFGBuildingDescriptor", Property="mOverrideDisplayNameAndDescription")
+Accessor=(Class="UFGBuildingDescriptor", Property="mBuildableClass")
+
+Accessor=(Class="UFGBuildDescriptor", Property="mBuildCategory")
+Accessor=(Class="UFGBuildDescriptor", Property="mSubCategories")
+Accessor=(Class="UFGBuildDescriptor", Property="mBuildMenuPriority")
+
+Accessor=(Class="UFGItemDescriptorNuclearFuel", Property="mSpentFuelClass")
+Accessor=(Class="UFGItemDescriptorNuclearFuel", Property="mAmountOfWaste")
+
+Accessor=(Class="AFGResourceNode", Property="mPurity")
+Accessor=(Class="AFGResourceNode", Property="mAmount")
+Accessor=(Class="AFGResourceNode", Property="mResourcesLeft")
+
+Accessor=(Class="AFGResourceNodeBase", Property="mResourceClass")
+
+Accessor=(Class="AFGResourceNodeFrackingCore", Property="mSatellites")
+Accessor=(Class="AFGResourceNodeFrackingCore", Property="mActivator")
+
+Accessor=(Class="AFGBuildable", Property="mHologramClass")
+Accessor=(Class="AFGBuildable", Property="mDisplayName")
+Accessor=(Class="AFGBuildable", Property="mDescription")
+Accessor=(Class="AFGBuildable", Property="MaxRenderDistance")
+Accessor=(Class="AFGBuildable", Property="mPoolHandles")
+Accessor=(Class="AFGBuildable", Property="mInteractWidgetClass")
+Accessor=(Class="AFGBuildable", Property="mNumFactoryConnections")
+Accessor=(Class="AFGBuildable", Property="mNumPowerConnections")
+Accessor=(Class="AFGBuildable", Property="mInteractingPlayers")
+Accessor=(Class="AFGBuildable", Property="mShouldModifyWorldGrid")
+
+Accessor=(Class="AFGBuildableFactory", Property="mPowerConsumption")
+Accessor=(Class="AFGBuildableFactory", Property="mPowerConsumptionExponent")
+Accessor=(Class="AFGBuildableFactory", Property="mEffectUpdateInterval")
+Accessor=(Class="AFGBuildableFactory", Property="mEffectUpdateAccumulator")
+Accessor=(Class="AFGBuildableFactory", Property="mCachedFluidStackSize")
+Accessor=(Class="AFGBuildableFactory", Property="mCachedProductionStatus")
+Accessor=(Class="AFGBuildableFactory", Property="mCachedSkeletalMeshes")
+
+Accessor=(Class="AFGBuildableLightSource", Property="mIsEnabled")
+Accessor=(Class="AFGBuildableLightSource", Property="mCurrentLightColor")
+Accessor=(Class="AFGBuildableLightSource", Property="mPowerConsumption")
+Accessor=(Class="AFGBuildableLightSource", Property="mHasPower")
+Accessor=(Class="AFGBuildableLightSource", Property="mIsDay")
+
+Accessor=(Class="UFGFactoryCustomizationCollection", Property="mCustomizationClass")
+Accessor=(Class="UFGFactoryCustomizationCollection", Property="mCustomizationClass")
+BlueprintReadWrite=(Class="UFGFactoryCustomizationCollection", Property="mCustomizations")
+BlueprintReadWrite=(Class="UFGFactoryCustomizationCollection", Property="mCustomizations")
+
+Accessor=(Class="AFGBuildableSubsystem", Property="mCustomizationCollectionClasses")
+BlueprintReadWrite=(Class="AFGBuildableSubsystem", Property="mCustomizationCollectionClasses")
+BlueprintReadWrite=(Class="FGResearchTree", Property="mNodes")
+
+Accessor=(Class="AFGGameState", Property="mSwatchGroupDatum")
+BlueprintReadWrite=(Class="AFGGameState", Property="mSwatchGroupDatum")
+
+BlueprintReadWrite=(Class="FGBuildableGeneratorFuel", Property="mAvailableFuelClasses")
+BlueprintReadWrite=(Class="FGBuildableGeneratorFuel", Property="mCurrentFuelClass")
+BlueprintReadWrite=(Class="FGBuildableGeneratorFuel", Property="mFuelResourceForm")
+BlueprintReadWrite=(Class="FGBuildableGeneratorFuel", Property="mSupplementalResourceClass")
+BlueprintReadWrite=(Class="FGBuildableGeneratorFuel", Property="mDefaultFuelClasses")
+
+BlueprintReadWrite=(Class="UFGItemDescriptor", Property="mSubCategories")
+BlueprintReadWrite=(Class="UFGItemDescriptor", Property="mQuickSwitchGroup")
+BlueprintReadWrite=(Class="UFGItemDescriptor", Property="mMenuPriority")
+BlueprintReadWrite=(Class="UFGItemDescriptor", Property="mCategory")
+
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep1UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep1_5UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep2UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep3UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep4UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mStep5UpgradeSchematic")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep1Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep1_5Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep2Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep3Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep4Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidStep5Upgrade")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mDidPickUpIronOre")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mIronOreDescriptor")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mIntroTutorialData")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mHasCompletedIntroSequence")
+BlueprintReadWrite=(Class="AFGTutorialIntroManager", Property="mHasCompletedIntroTutorial")
+
+BlueprintReadWrite=(Class="AFGGameState", Property="mUnlockCustomizerSchematic")
+
+Friend=(Class="UFGItemDescriptor", FriendClass="UKBFL_Items")
+Friend=(Class="UFGRecipe", FriendClass="UKBFL_Recipes")
+Friend=(Class="UFGItemDescriptor", FriendClass="UKBFL_Recipes")
+Friend=(Class="UFGRecipe", FriendClass="AKBFLDataSubsystem")
+Friend=(Class="UFGSchematic", FriendClass="AKBFLDataSubsystem")
+Friend=(Class="UFGItemDescriptor", FriendClass="AKBFLDataSubsystem")
+Friend=(Class="UFGItemCategory", FriendClass="UKBFL_Items")
+Friend=(Class="UFGItemDescriptorNuclearFuel", FriendClass="UKBFL_Items")
+Friend=(Class="AFGUnlockSubsystem", FriendClass="UKBFL_Util")
+Friend=(Class="AFGBuildGun", FriendClass="UKBFL_Player")
+
+Friend=(Class="AFGGameState", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="AFGBuildableSubsystem", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="UFGFactoryCustomizationCollection", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="UWorldModuleManager", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="UFGFactoryCustomizationDescriptor_Material", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="UFGFactoryCustomizationDescriptor", FriendClass="UKBFLCustomizerSubsystem")
+Friend=(Class="UFGItemDescriptor", FriendClass="UKBFLCustomizerSubsystem")
+
+Friend=(Class="UWorldModuleManager", FriendClass="UKBFLResourceNodeSubsystem")
+Friend=(Class="AFGResourceNode", FriendClass="UKBFLResourceNodeSubsystem")
+Friend=(Class="AFGResourceNodeBase", FriendClass="UKBFLResourceNodeSubsystem")
+Friend=(Class="AFGResourceScanner", FriendClass="UKBFLResourceNodeSubsystem")
+Friend=(Class="AFGResourceNodeFrackingCore", FriendClass="UKBFLResourceNodeSubsystem")
+Friend=(Class="AFGResourceNodeFrackingSatellite", FriendClass="UKBFLResourceNodeSubsystem")
+
+Friend=(Class="UWorldModuleManager", FriendClass="UKBFLContentCDOHelperSubsystem")
+Friend=(Class="UFGItemDescriptor", FriendClass="UKBFLContentCDOHelperSubsystem")
+Friend=(Class="UFGItemDescriptorNuclearFuel", FriendClass="UKBFLContentCDOHelperSubsystem")
+Friend=(Class="UFGResourceDescriptor", FriendClass="UKBFLContentCDOHelperSubsystem")
+Friend=(Class="UFGSchematic", FriendClass="UKBFLContentCDOHelperSubsystem")
+Friend=(Class="AModContentRegistry", FriendClass="UKBFLContentCDOHelperSubsystem")
+
+Friend=(Class="UFGSchematic", FriendClass="UKBFL_CDOHelperClass_Schematic")
+Friend=(Class="UFGItemDescriptor", FriendClass="UKBFL_CDOHelperClass_Items")
+Friend=(Class="UFGResourceDescriptor", FriendClass="UKBFL_CDOHelperClass_Items")
+Friend=(Class="UFGItemDescriptorNuclearFuel", FriendClass="UKBFL_CDOHelperClass_Items")
+Friend=(Class="UFGRecipe", FriendClass="UKBFL_CDOHelperClass_Recipes")
+
+Friend=(Class="AFGUnlockSubsystem", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="AFGRecipeManager", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="AFGSchematicManager", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="UFGUnlockRecipe", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="AFGResearchManager", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="UFGSchematic", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="UFGResearchTree", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+Friend=(Class="AModContentRegistry", FriendClass="UKBFL_CDOHelperClass_RemoverBase")
+
+Friend=(Class="AFGResourceNode", FriendClass="UKBFLResourceNodeDescriptor")
+Friend=(Class="AFGResourceNodeBase", FriendClass="UKBFLResourceNodeDescriptor")
+Friend=(Class="AFGResourceNodeFrackingCore", FriendClass="UKBFLResourceNodeDescriptor")
+Friend=(Class="AFGResourceNodeFrackingSatellite", FriendClass="UKBFLResourceNodeDescriptor")
+
+Friend=(Class="AFGResourceNode", FriendClass="UKBFLResourceNodeDescriptor_ResourceNode")
+Friend=(Class="AFGResourceNodeBase", FriendClass="UKBFLResourceNodeDescriptor_ResourceNode")
+Friend=(Class="AFGResourceNodeFrackingCore", FriendClass="UKBFLResourceNodeDescriptor_ResourceNode")
+Friend=(Class="AFGResourceNodeFrackingSatellite", FriendClass="UKBFLResourceNodeDescriptor_ResourceNode")
+Friend=(Class="AFGBuildableResourceExtractorBase", FriendClass="UKBFLResourceNodeDescriptor_ResourceNode")
+
+Friend=(Class="AFGResourceNode", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+Friend=(Class="AFGResourceNodeBase", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+Friend=(Class="AFGResourceNodeFrackingCore", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+Friend=(Class="AFGResourceNodeFrackingSatellite", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+Friend=(Class="AFGBuildableFrackingActivator", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+Friend=(Class="AFGBuildableResourceExtractorBase", FriendClass="UKBFLResourceNodeDescriptor_ResourceWell")
+
+Friend=(Class="AFGBuildableFrackingActivator", FriendClass="FKBFLModule")
+Friend=(Class="AFGBuildableFrackingExtractor", FriendClass="FKBFLModule")
+Friend=(Class="UWorldModuleManager", FriendClass="FKBFLModule")
+```

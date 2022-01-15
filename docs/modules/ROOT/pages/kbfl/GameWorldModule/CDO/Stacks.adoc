@@ -1,0 +1,16 @@
+= CDO Helper: Stacks
+
+== Basic
+
+This System allow us easily to overwrite the stack size of an item.
+
+[WARNING]
+====
+CDO Helper Classes use only SoftObject (so if we select a class that not exists or can lod the CDO will skip)
+====
+
+== How to use
+
+You only need to add the Item Descriptor to the `MCDOInformation Map` > `select the phase where the CDO should be done` > `m Item Stack Size CDO`
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]

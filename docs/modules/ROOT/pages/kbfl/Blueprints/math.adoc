@@ -1,0 +1,122 @@
+# Blueprint: Math Library
+
+## CalculateOrbitPoints
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Math/BP_CalculateOrbitPoints.png[BP_CalculateOrbitPoints,150,role=right]
+- Calculate an array of locations for a orbit
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<FVector> CalculateOrbitPoints(float Ellipse = 1.0f, float Radius = 1000.0f, float Tilt = 0.0f, int PointCount = 12);
+```
+
+|===
+|**Input** |**Description**
+
+|**float** Ellipse
+|Ellipse of the orbit
+
+|**float** Radius
+|Radius of the orbit
+
+|**float** Tilt
+|Tilt of the orbit
+
+|**int** PointCount
+|count of locations
+|===
+
+|===
+|**Output** |**Description**
+
+| **TArray<FVector>** Return
+|Array of the location in the orbit
+|===
+
+
+## CalculateItemsPerMin
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Math/BP_CalculateItemsPerMin.png[BP_CalculateItemsPerMin,150,role=right]
+- Calculate the item per minutes value
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static float CalculateItemsPerMin(int ItemCount, float ProductionTime);
+```
+
+|===
+|**Input** |**Description**
+
+|**int** ItemCount
+|Item count for one cycle
+
+|**float** ProductionTime
+|Time of a production cycle
+|===
+
+|===
+|**Output** |**Description**
+
+| **float** Return
+|Items per minute
+|===
+
+
+## CalculateM3PerMin
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Math/BP_CalculateM3PerMin.png[BP_CalculateM3PerMin,150,role=right]
+- Calculate the item per minutes value (in m³)
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static float CalculateM3PerMin(int ItemCount, float ProductionTime);
+```
+
+|===
+|**Input** |**Description**
+
+|**int** ItemCount
+|Item count for one cycle
+
+|**float** ProductionTime
+|Time of a production cycle
+|===
+
+|===
+|**Output** |**Description**
+
+| **float** Return
+|Items per minute (in m³)
+|===
+
+
+## CalculateM3PerMinForWidget
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Math/BP_CalculateM3PerMinForWidget.png[BP_CalculateM3PerMinForWidget,150,role=right]
+- Calculate the item per minutes for the fluid widget input
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static float CalculateM3PerMinForWidget(int ItemCount, float ProductionTime);
+```
+
+|===
+|**Input** |**Description**
+
+|**int** ItemCount
+|Item count for one cycle
+
+|**float** ProductionTime
+|Time of a production cycle
+|===
+
+|===
+|**Output** |**Description**
+
+| **float** Return
+|Items per minute for the fluid widget input
+|===

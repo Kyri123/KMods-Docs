@@ -1,0 +1,114 @@
+# Blueprint: Utils Library
+
+[NOTE]
+====
+This site is marked as WIP +
+Description for parameters are missing!
+====
+
+## GetDataSubsystem
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_GetDataSubsystem.png[BP_GetDataSubsystem,150,role=right]
+- Get Data Subsystem
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static AKBFLDataSubsystem* GetDataSubsystem(UObject* WorldContext);
+```
+
+
+## GetSubsystem
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_GetSubsystem.png[BP_GetSubsystem,150,role=right]
+- Get Subsystem by Class
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static AModSubsystem* GetSubsystem(UObject* WorldContext, TSubclassOf<AModSubsystem> Subsystem);
+```
+
+
+## RemoveArrayFromScanners
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveArrayFromScanners.png[BP_RemoveArrayFromScanners,150,role=right]
+- Remove a Array from Resources from the Scanner
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveArrayFromScanners(UObject* WorldContext, const TArray<TSubclassOf<UFGResourceDescriptor>> Resources);
+```
+
+
+## RemoveAllNotAllowedScanners
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveAllNotAllowedScanners.png[BP_RemoveAllNotAllowedScanners,150,role=right]
+- Remove all from the Scanner what not in the Array
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveAllNotAllowedScanners(UObject* WorldContext, const TArray<TSubclassOf<UFGResourceDescriptor>> Resources);
+```
+
+
+## RemoveFromScanner
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveFromScanner.png[BP_RemoveFromScanners,150,role=right]
+- Remove one Resource from the Scanner
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveFromScanner(UObject* WorldContext, const TSubclassOf<UFGResourceDescriptor> Resource);
+```
+
+
+## RemoveNodeClassFromWorld
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveNodeClassFromWorld.png[BP_RemoveNodeClassFromWorld,150,role=right]
+- Remove all Resource Nodes from a Class
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveNodeClassFromWorld(UObject* WorldContext, const TSubclassOf<AFGResourceNode> NodeClass);
+```
+
+
+## RemoveNodeResourceClassFromWorld
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveNodeResourceClassFromWorld.png[BP_RemoveNodeResourceClassFromWorld,150,role=right]
+- Remove all Resource Nodes from a resource item Class
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveNodeResourceClassFromWorld(UObject* WorldContext, const TSubclassOf<UFGResourceDescriptor> Resource);
+```
+
+
+## RemoveNodeResourcesClassFromWorld
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveNodeResourcesClassFromWorld.png[BP_RemoveNodeResourcesClassFromWorld,150,role=right]
+- Remove all Resource Nodes from a Array of resource item Class
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveNodeResourcesClassFromWorld(UObject* WorldContext, const TArray<TSubclassOf<UFGResourceDescriptor>> Resources);
+```
+
+
+## RemoveNodeNOTResourcesClassFromWorld
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Util/BP_RemoveNodeNOTResourcesClassFromWorld.png[BP_RemoveNodeNOTResourcesClassFromWorld,150,role=right]
+- Remove all Resource not what NOT in the Array
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintCallable**
+
+### Function
+```cpp
+static void RemoveNodeNOTResourcesClassFromWorld(UObject* WorldContext, const TArray<TSubclassOf<UFGResourceDescriptor>> Resources);
+```

@@ -1,0 +1,270 @@
+# C++ Inventory Helper
+
+## CanStoreItem
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_CanStoreItem.png[BP_CanStoreItem,150,role=right]
+- This function check if we can store an item in an inventory
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Pure**
+
+### Function
+```cpp
+static bool CanStoreItem(UFGInventoryComponent* Inventory, int InvIndex, TSubclassOf<UFGItemDescriptor> ItemClass, int Amount = 1);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to store the item(s)
+
+|**int** InvIndex
+|Index of the slot where we want to store the items
+
+|**TSubclassOf<UFGItemDescriptor>** ItemClass
+|Class of the Item what we want to store
+
+|**int** Amount
+|Amount of the items we want to store
+|===
+
+|===
+|**Output** |**Description**
+
+| **bool** Return
+|Can we store the amount of item in the inventory
+|===
+
+
+## StoreItemAmountInInventory
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_StoreItemAmountInInventory.png[BP_StoreItemAmountInInventory,150,role=right]
+- This function can Store an Item in an Inventory
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static void StoreItemAmountInInventory(UFGInventoryComponent* inventory, int InvIndex, TSubclassOf<UFGItemDescriptor> itemClass, int amount = 1);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to store the item(s)
+
+|**int** InvIndex
+|Index of the slot where we want to store the items
+
+|**TSubclassOf<UFGItemDescriptor>** ItemClass
+|Class of the Item what we want to store
+
+|**int** Amount
+|Amount of the items we want to store
+|===
+
+## StoreItemStackInInventory
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_StoreItemStackInInventory.png[BP_StoreItemStackInInventory,150,role=right]
+- This function can Store a Stack in an Inventory
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static void StoreItemStackInInventory(UFGInventoryComponent* inventory, int InvIndex, FInventoryStack ItemStack);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to store the item(s)
+
+|**int** InvIndex
+|Index of the slot where we want to store the items
+
+|**FInventoryStack** ItemStack
+|Stack of an item what we want to store
+|===
+
+## AddItemsInInventory
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_AddItemsInInventory.png[BP_AddItemsInInventory,150,role=right]
+- This function can Store Items in an Inventory (not using Slot Indexes)
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static void AddItemsInInventory(UFGInventoryComponent* inventory, TSubclassOf<UFGItemDescriptor> itemClass, int Amount = 1);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to store the item(s)
+
+|**TSubclassOf<UFGItemDescriptor>** ItemClass
+|Class of the Item what we want to store
+
+|**int** Amount
+|Amount of the items we want to store
+|===
+
+
+## GatherRefundFromInventory
+- Filter the target inventory for solid items and add them into `out_refund`. +
+I use this in building classes for custom inventory's to get the refund on dismantle. (Example)
+```cpp
+Header:
+virtual void GetDismantleRefund_Implementation(TArray<FInventoryStack>& out_refund) const override;
+
+CPP:
+void AYourClass::GetDismantleRefund_Implementation(TArray<FInventoryStack>& out_refund) const
+{
+  Super::GetDismantleRefund_Implementation(out_refund);
+  UKBFLCppInventoryHelper::GatherRefundFromInventory(GetSecondOutputInventory(), out_refund);
+}
+```
+- Can it called by Blueprint: **NO**
+
+### Function
+```cpp
+static void GatherRefundFromInventory(UFGInventoryComponent* inventory, TArray<FInventoryStack>& out_refund);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want gather the refund
+
+|**TArray<FInventoryStack>&** out_refund
+|Fill the Array with the founded items
+|===
+
+
+## PushPipe
+- Push the fluid to the pipe (can be use in FactoryTick is also recommend)
+- Can it called by Blueprint: **No**
+- Example:
+```cpp
+void AYourClass::Factory_Tick(float dt)
+{
+  Super::Factory_Tick(dt);
+  if(HasAuthority()) {
+    UKBFLCppInventoryHelper::PushPipe(GetInventory(), 0, dt, YourItemClass, PipeConnection, 300);
+    UKBFLCppInventoryHelper::PushPipe(GetInventory(), 0, dt, {YourItemClass1, YourItemClass2}, PipeConnection, 300);
+  }
+}
+```
+
+### Function
+```cpp
+static void PushPipe(UFGInventoryComponent* Inventory, int InventoryIndex, float dt, UFGPipeConnectionFactory* PipeOutput, int PushAmount = 200);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want handle this Connection
+
+|**int** InvIndex
+|Index of the slot where we want to push
+
+|**float** dt
+|DeltaTime form tick
+
+|**UFGPipeConnectionFactory*** PipeOutput
+| Pipe connection for output the fluid
+
+|**int** PushAmount
+|Amount that should max output
+|===
+
+
+## PullPipe
+- With this function can we pull items from a pipe (can be use in FactoryTick is also recommend)
+- Can it called by Blueprint: **No**
+- Example:
+```cpp
+void AYourClass::Factory_Tick(float dt)
+{
+  Super::Factory_Tick(dt);
+  if(HasAuthority()) {
+    UKBFLCppInventoryHelper::PullPipe(GetInventory(), 0, dt, YourItemClass, PipeConnection, 300);
+    UKBFLCppInventoryHelper::PullPipe(GetInventory(), 0, dt, {YourItemClass1, YourItemClass2}, PipeConnection, 300);
+  }
+}
+```
+
+### Function
+```cpp
+static void PullPipe(UFGInventoryComponent* Inventory, int InventoryIndex, float dt, TSubclassOf<UFGItemDescriptor> AllowedItem, UFGPipeConnectionFactory* PipeInputComp, int PullAmount = 200);
+static void PullPipe(UFGInventoryComponent* Inventory, int InventoryIndex, float dt, TArray<TSubclassOf<UFGItemDescriptor>> AllowedItem, UFGPipeConnectionFactory* PipeInputComp, int PullAmount = 200);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want handle this Connection
+
+|**int** InvIndex
+|Index of the slot where we want to push
+
+|**float** dt
+|DeltaTime form tick
+
+|**TSubclassOf<UFGItemDescriptor>** AllowedItem
+**TArray<TSubclassOf<UFGItemDescriptor>>** AllowedItem
+|Item or Items (allow Array here too) that allow to grab
+
+|**UFGPipeConnectionFactory*** PipeOutput
+|Pipe connection for input and pull the fluid
+
+|**int** PushAmount
+|Amount that should max output
+|===
+
+
+## PullBelt
+- With this function can we pull items from a belt (can be use in FactoryTick is also recommend)
+- Can it called by Blueprint: **No**
+- Example:
+```cpp
+void AYourClass::Factory_Tick(float dt)
+{
+  Super::Factory_Tick(dt);
+  if(HasAuthority()) {
+    UKBFLCppInventoryHelper::PullBelt(GetInventory(), 0, dt, YourItemClass, BeltConnection);
+    UKBFLCppInventoryHelper::PullBelt(GetInventory(), 0, dt, {YourItemClass1, YourItemClass2}, BeltConnection);
+  }
+}
+```
+
+### Function
+```cpp
+static void PullBelt(UFGInventoryComponent* Inventory, int InventoryIndex, float dt, TSubclassOf<UFGItemDescriptor> AllowedItem, UFGFactoryConnectionComponent* BeltInput);
+static void PullBelt(UFGInventoryComponent* Inventory, int InventoryIndex, float dt, TArray<TSubclassOf<UFGItemDescriptor>> AllowedItem, UFGFactoryConnectionComponent* BeltInput);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want handle this Connection
+
+|**int** InvIndex
+|Index of the slot where we want to push
+
+|**float** dt
+|DeltaTime form tick
+
+|**TSubclassOf<UFGItemDescriptor>** AllowedItem
+**TArray<TSubclassOf<UFGItemDescriptor>>** AllowedItem
+|Item or Items (allow Array here to) that allow to grab
+
+|**UFGFactoryConnectionComponent*** BeltInput
+|Pipe connection for input and pull the item
+|===

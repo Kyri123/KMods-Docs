@@ -1,0 +1,62 @@
+# Blueprint: Player Library
+
+[NOTE]
+====
+This site is marked as WIP +
+Description for parameters are missing!
+====
+
+## GetBuildingGun
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Player/BP_GetBuildingGun.png[BP_GetBuildingGun,150,role=right]
+- Get the build gun from local player
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static AFGBuildGun* GetBuildingGun(UObject* WorldContext);
+```
+
+## GetFGController
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Player/BP_GetFGController.png[BP_GetFGController,150,role=right]
+- Get the player controller from local player
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static AFGPlayerController* GetFGController(UObject* WorldContext);
+```
+
+## GetFGCharacter
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Player/BP_GetFGCharacter.png[BP_GetFGCharacter,150,role=right]
+- Get the player character from local player
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static AFGCharacterPlayer* GetFGCharacter(UObject* WorldContext);
+```
+
+## GetBuildingGunHitResult
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Player/BP_GetBuildingGunHitResult.png[BP_GetBuildingGunHitResult,150,role=right]
+- Get buildgun HitResult from local player
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static void GetBuildingGunHitResult(UObject* WorldContext, bool& IsInBuildOrDismantleState, FHitResult& HitResult);
+```
+
+## GetPlayerBuildState
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Player/BP_GetPlayerBuildState.png[BP_GetPlayerBuildState,150,role=right]
+- Get buildgun buildstate from local player
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static EBuildGunState GetPlayerBuildState(UObject* WorldContext);
+```

@@ -1,0 +1,65 @@
+= Getting Start
+
+== Install KBFL
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/VSGenerate.png[Sunset,250,role=right]
+- To install KBFL download the latest version [HERE](https://gitlab.kmods.de/Kyrium/KBFL/-/releases) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
+- Copy the plugin in your Plugins folder of your SML project
+  - `<sml project path>/Plugins/KBFL/`
+- Generate now again the **Visual Studio project files**
+
+- open `FactoryGame.sln`
+- Build `Shipping` and `Developer Editor`
+- if all this done you can open the uproject and use KBFL
+
+== Update KBFL
+
+- To Update KBFL download the latest version [HERE](https://gitlab.kmods.de/Kyrium/KBFL/-/releases) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
+- Overwrite the old KBFL folder
+- Generate now again the **Visual Studio project files**
+- Open `FactoryGame.sln`
+- Build `Shipping` and `Developer Editor`
+
+== Add KBFL as dependency
+
+After install KBFL and using KBFL in your mod. You should add KBFL in your mod dependency.
+For this you need to add KBFL in your `<modref>.uplugin`.
+
+[TIP]
+====
+You can manuel update KBFL to avoid crashes on furture updates! +
+so use `"SemVersion": "1.9.0",` and not `"SemVersion": "^1.9.0",` +
+So SMM will force the version `1.9.0` but this can have conflicts with other mods.
+====
+
+Here is a example:
+```<modref>.uplugin
+"Plugins": [
+    {
+        "Name": "SML",
+        "SemVersion": "^3.3.0",
+        "Enabled": false
+    },
+    {
+        "Name": "KBFL",
+        "SemVersion": "1.9.0",
+        "Enabled": false
+    }
+]
+```
+
+```<modref>.uplugin
+"Plugins": [
+    {
+        "Name": "SML",
+        "SemVersion": "^3.3.0",
+        "Enabled": false
+    },
+    {
+        "Name": "KBFL",
+        "SemVersion": "^1.9.0",
+        "Enabled": false
+    }
+]
+```
+

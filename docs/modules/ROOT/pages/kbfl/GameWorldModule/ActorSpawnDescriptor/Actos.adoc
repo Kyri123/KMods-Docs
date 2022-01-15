@@ -1,0 +1,42 @@
+= Actor Spawn Descriptor: Actors
+
+== Basic
+
+This System allow us to spawn easy new actors like buildings, spawner and more.
+
+== Create a new actor spawn
+
+First you need to create a new blueprint class from the parent `KBFLActorSpawnDescriptor` this class will use to set the options and information for the Actor.
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Spawner/blueprint.png[]
+
+after that we need to add this Description to our GameWorldModule. for that use the tab `Resource Nodes`
+and ass this class to `M Actor Spawn Descriptors`
+
+you can also mark classes to remove from the world with `M Actors to Remove`
+
+And you can set in the GameWorldMode when the subsystem should start to spawn by change `m Call Nodes in Phase`. (I use `Initialization` as default)
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Spawner/menu.png[]
+
+[WARNING]
+====
+Please don't use `M Resource Nodes Information` and `M Options` this will not use by the Descriptor and based an old system that no longer supported and used (some mods still work with this system that's why I not remove that)
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Spawner/Old.png[]
+====
+
+== Configuration
+
+=== Main Options
+
+* `M Actor Class` The Class of the actor to check and spawn
+* `M Locations` Spawn Location's for the actor
+
+=== Spawn Options
+
+* `M Allow to Move` Should the actor allow moving if the location incorrect and in range of the `M Check Range`
+* `M Remove Old` Should the system remove all incorrect Actors? (incorrect are all actors that not in the `M Check Range` or duplicate)
+* `M Check Range` The range for the sphere for checking for other Actors (to prevent overlap and infinity spawn)
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Spawner/actor.png[]

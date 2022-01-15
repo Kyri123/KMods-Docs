@@ -1,0 +1,114 @@
+# C++ Actor Helper
+
+## ActorsInSphere
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_ActorsInSphere.png[BP_ActorsInSphere,150,role=right]
+- Scan for actors of a class in a sphere
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static bool ActorsInSphere(UObject* WorldContext, UClass* ActorClass, FVector Location, TArray<AActor*> Ignore, TArray<AActor*>& OutActors, float Range = 250.0f);
+```
+
+|===
+|**Input** |**Description**
+
+|**UObject*** WorldContext
+|Will autofilled in Blueprint
+
+|**UClass*** ActorClass
+|Class of the actor for searching
+
+|**FVector** Location
+|Location of the sphere for searching
+
+|**float** Range
+|range of the sphere for searching
+|===
+
+|===
+|**Output** |**Description**
+
+| **bool** Return
+|Is an Actor found in range (return false if there is no Actor)
+
+| **TArray<AActor*>&** OutActors
+|Actors that found in defined range
+|===
+
+
+
+## HasFreeLineToActor
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_HasFreeLineToActor.png[BP_HasFreeLineToActor,150,role=right]
+- Fire a line from an actor to another actor and test is there a hit between them
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static bool HasFreeLineToActor(UObject* WorldContext, AActor* ActorSource, AActor* ActorTarget, float ZOffsetSource = 0.0f, float ZOffsetTarget = 0.0f);
+```
+
+|===
+|**Input** |**Description**
+
+|**UObject*** WorldContext
+|Will autofilled in Blueprint
+
+|**AActor*** ActorSource
+|Actor where the line start
+
+|**AActor*** ActorTarget
+|Actor where the line end
+
+|**float** ZOffsetSource
+|offset for the location of the start actor
+
+|**float** ZOffsetTarget
+|offset for the location of the end actor
+|===
+
+|===
+|**Output** |**Description**
+
+| **bool** Return
+|Is a Actor found in range (return false if there is no Actor)
+|===
+
+## HasFreeLineToComponent
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_HasFreeLineToComponent.png[BP_HasFreeLineToComponent,150,role=right]
+- Fire a line from an actor component to another actor component and test is there a hit between them
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static bool HasFreeLineToComponent(UObject* WorldContext, USceneComponent* ComponentSource, USceneComponent* ComponentTarget, float ZOffsetSource = 0.0f, float ZOffsetTarget = 0.0f);
+```
+
+|===
+|**Input** |**Description**
+
+|**UObject*** WorldContext
+|Will autofilled in Blueprint
+
+|**USceneComponent*** ComponentSource
+|Component where the line start
+
+|**USceneComponent*** ComponentTarget
+|Component where the line end
+
+|**float** ZOffsetSource
+|offset for the location of the start component
+
+|**float** ZOffsetTarget
+|offset for the location of the end component
+|===
+
+|===
+|**Output** |**Description**
+
+| **bool** Return
+|Is a Actor found in range (return false if there is no Actor)
+|===

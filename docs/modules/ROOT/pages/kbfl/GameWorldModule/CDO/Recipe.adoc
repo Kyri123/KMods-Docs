@@ -1,0 +1,36 @@
+= CDO Helper: Recipes
+
+== Basic
+
+This System allow us easily to overwrite content in Satisfactory.
+
+You create a Class or an instance of the CDOHelper and add them to GameWorldModule. +
+active the parameters you activate the CDO on this. +
+And the classes where we want to apply this CDO.
+
+[WARNING]
+====
+CDO Helper Classes use only SoftObject (so if we select a class that not exists or can lod the CDO will skip)
+====
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_Recipes.png[]
+
+== Create a new CDOHelper instance in parameter
+
+First way is directly create a UObject instance in the parameters: +
+`MCDOInformation Map` > `select the phase where the CDO should be done` > `M Recipe CDOHelpers` > `M Class Helper Object`
+
+Select here the base Class and the set the values you want.
+
+
+Example:
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]
+
+== Create a new CDOHelper
+
+First you need to create a new blueprint class from the parent `KBFL_CDOHelperClass_Recipes` this class will use to set the options and information for the CDO.
+
+Now add this class to your GameWorldModule: `MCDOInformation Map` > `select the phase where the CDO should be done` > `M Recipe CDOHelpers` > `M Class Helper Classes`
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/class.png[]

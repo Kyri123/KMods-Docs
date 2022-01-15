@@ -1,0 +1,20 @@
+= Customizer: Materials
+
+== Basic
+
+This system should it makes easier to add our new materials to existing other material desc.
+
+That we can change from a new material back with the vanilla one.
+
+== Using
+
+* `M Material Information` Array of all Information for the CDO call
+** `M Apply This Information To` Classes that we want to use as target for writing this information
+** `M Valid Buildables` Buildables that we want to add for valid (is usefull if we make new buildabes with mor functionality like Solar Roof)
+** `M Buildable Map` Buildable and target recipe (Buildable is normal the source what we target and the recipe is that what we want to replace)
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Swatch/Materials.png[]
+
+== Options
+
+You can set when the Customizer Subsystem should call. For this change `M Call Customizer in Phase` (Default is `Initialization`)

@@ -1,0 +1,71 @@
+= Asset Finder
+
+== What's the Asset Finder
+
+The Asset finder helps you to easier register CDOHelper and Schematics, Research Trees and Recipes in the Mod Content registry.
+
+It searches in the Folders that you set for these classes and register this then in the Mod Content registry.
+
+== Using
+
+After setup your xref:kbfl/GameWorldModule/howto.adoc[KBFL GameWorldModule] you have now a `KBFL GameWorldModule` section in the details. There are now 2 Inputs that can be toggled on and off. (if is off then will this code not executed and skipped by the system!)
+
+- `M Asset Registry Options` This is the array for register Schematics, Research Trees and Recipes.
+
+- `M Asset Cdo Finder` This is the array for register CDO helper classes in a given Phase.
+
+== `M Asset Registry Options`
+
+[WARNING]
+====
+This functionality is by default: **Disabled**
+====
+
+|===
+|Variable |Description
+
+|`Path`
+|The Path where we scan for the Assets (This need to be valid) Tip: the path for your mod begins with `/<modref>/` for example `/KBFL/`
+
+|`Recursive`
+|Enable the scan recursive in the directory. (Find all Assets in sub directory)
+
+|`Register Schematics`
+|Enable the function to automatic register Recipes.
+
+|`Register Research Trees`
+|Enable the function to automatic register Recipes.
+
+|`Register Recipes`
+|Enable the function to automatic register Recipes.
+|===
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/AssetFinder/AssetFinder_Content.png[]
+
+== `M Asset Cdo Finder`
+
+[WARNING]
+====
+This functionality is by default: **Disabled**
+====
+
+|===
+|Variable |Description
+
+|`Path`
+|The Path where we scan for the Assets (This need to be valid) Tip: the path for your mod begins with `/<modref>/` for example `/KBFL/`
+
+|`Recursive`
+|Enable the scan recursive in the directory. (Find all Assets in sub directory)
+
+|`B Put in Phase`
+|In what phase should this CDO helpers add
+
+|`Find Remover`
+|Should the Helper find Remover classes
+
+|`Find CDOHelpers`
+|Should the Helper find normal CDO classes (all not remover cdo helpers)
+|===
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/AssetFinder/AssetFinder_CDO.png[]

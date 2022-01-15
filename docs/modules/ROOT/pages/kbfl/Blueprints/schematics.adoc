@@ -1,0 +1,66 @@
+# Blueprint: Schematics Library
+
+[NOTE]
+====
+This site is marked as WIP +
+Description for parameters are missing!
+====
+
+## GetAllRegisteredSchematics
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Schematics/BP_GetAllRegisteredSchematics.png[BP_GetAllRegisteredSchematics,150,role=right]
+- Get all Schematics in game
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<TSubclassOf<UFGSchematic>> GetAllRegisteredSchematics(UObject* WorldContext);
+```
+
+
+## GetAllRegisteredSchematicsWithInfos
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Schematics/BP_GetAllRegisteredSchematicsWithInfos.png[BP_GetAllRegisteredSchematicsWithInfos,150,role=right]
+- Get all Schematics in game
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<FKBFLSchematicInfo> GetAllRegisteredSchematicsWithInfos(UObject* WorldContext);
+```
+
+
+## GetAllModSchematics
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Schematics/BP_GetAllModSchematics.png[BP_GetAllModSchematics,150,role=right]
+- Get all Schematics in game from a Mod
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<TSubclassOf<UFGSchematic>> GetAllModSchematics(UObject* WorldContext, FName ModName);
+```
+
+
+## GetAllModsSchematics
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Schematics/BP_GetAllModsSchematics.png[BP_GetAllModsSchematics,150,role=right]
+- Get all Schematics in game from Mods
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<TSubclassOf<UFGSchematic>> GetAllModsSchematics(UObject* WorldContext, TArray<FName> ModNames);
+```
+
+
+## GetAllModsSchematicsWithInfo
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Schematics/BP_GetAllModsSchematicsWithInfo.png[BP_GetAllModsSchematicsWithInfo,150,role=right]
+- Get all Schematics in game from Mods with Infos from where it from
+- Can it called by Blueprint: **YES**
+- Blueprint type: **BlueprintPure**
+
+### Function
+```cpp
+static TArray<FKBFLSchematicInfo> GetAllModsSchematicsWithInfo(UObject* WorldContext, TArray<FName> ModNames);
+```

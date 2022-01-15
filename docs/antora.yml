@@ -1,0 +1,5 @@
+name: kmods
+version: 'latest'
+title: 'KMods Docs'
+nav:
+- modules/ROOT/nav.adoc

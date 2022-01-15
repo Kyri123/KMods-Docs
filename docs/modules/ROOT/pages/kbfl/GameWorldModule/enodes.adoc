@@ -1,0 +1,24 @@
+= Easy Nodes
+
+== What's Easy Nodes?
+
+Easy Nodes overwrite automatic all Research Trees in your GameWorldModule.
+
+This will automatically generate the lines in the MAM and set the values in `ChildrenAndRoads` and `UnhiddenBy` depends on `Parents` and `NodesToUnhide` of the Research Tree
+
+This System always find the **shortest** way and overwrite **ALL** Trees!
+
+== Using
+
+[WARNING]
+====
+This functionality is by default: **Disabled**
+====
+
+To enable Easy Nodes functionality you need to overwrite the function `UseEasyNodes` and return a true value.
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/easyNodes.png[]
+
+Overwrite Function:
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/OverwriteFunction.png[]

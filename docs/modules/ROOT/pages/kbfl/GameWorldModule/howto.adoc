@@ -1,0 +1,29 @@
+= Use KBFL GameWorldModule
+
+== create a new GameWorldModule
+
+To create a new KBFL GameWorldModule: create a new Blueprint and use as parent `BP_KBFLGameWorldModule`
+
+[WARNING]
+====
+It is very important to use `BP_KBFLGameWorldModule` for the functionality of all these features! +
+The Blueprint of this class add some more things and set the data in the Interface to call it from the Subsystem! +
+If you don't use that the Subsystem don't know everything about you set values.
+====
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/NewGWM.png[]
+
+== change exsisting GameWorldModule
+
+- Go in your GameWorldModule
+- Open the Class Settings
+- Set the parent Class to `BP_KBFLGameWorldModule`
+
+[WARNING]
+====
+It is very important to use `BP_KBFLGameWorldModule` for the functionality of all these features! +
+The Blueprint of this class add some more things and set the data in the Interface to call it from the Subsystem! +
+If you don't use that the Subsystem don't know everything about you set values.
+====
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/change.png[]

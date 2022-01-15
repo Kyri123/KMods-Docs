@@ -1,0 +1,51 @@
+= CDO Helper: Content Remover
+
+== Basic
+
+This System allow us easily to overwrite content in Satisfactory.
+
+You create a Class or an instance of the CDOHelper and add them to GameWorldModule. +
+active the parameters you activate the CDO on this. +
+And the classes where we want to apply this CDO.
+
+[WARNING]
+====
+CDO Helper Classes use only SoftObject (so if we select a class that not exists or can lod the CDO will skip)
+====
+
+There are 3 Types if Content Remover
+
+- Recipe Remover `KBFL_CDOHelperClass_RecipeRemover` (Remove recipe from the game)
+- Schematic Remover `KBFL_CDOHelperClass_ResearchTreeRemover` (remove the schematic & there recipes from the game)
+- Research Tree Remover `KBFL_CDOHelperClass_SchematicRemover` (remove the Research Tree, there schematics & there recipes from the game)
+
+[WARNING]
+====
+You can exclude schematics or recipes.
+====
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_RecipeRemover.png[]
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_SchematicRemover.png[]
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_TreeRemover.png[]
+
+
+
+== Create a new CDOHelper instance in parameter
+
+First way is directly create a UObject instance in the parameters: +
+`MCDOInformation Map` > `select the phase where the CDO should be done` > `M Remove CDO` > `M Class Helper Object`
+
+Select here the base Class and the set the values you want.
+
+
+Example:
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]
+
+== Create a new CDOHelper
+
+First you need to create a new blueprint class from the parent `KBFL_CDOHelperClass_RecipeRemover`, `KBFL_CDOHelperClass_ResearchTreeRemover` or `KBFL_CDOHelperClass_SchematicRemover` this class will use to set the options and information for the CDO.
+
+Now add this class to your GameWorldModule: `MCDOInformation Map` > `select the phase where the CDO should be done` > `M Remove CDO` > `M Class Helper Classes`
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/class.png[]

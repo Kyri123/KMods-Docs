@@ -1,0 +1,63 @@
+# Blueprint: Inventory Library
+
+## FindFirstAllowedSlot
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Inventory/BP_FindFirstAllowedSlot.png[BP_FindFirstAllowedSlot,150,role=right]
+- find the first slot where the item is allowed
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static void FindFirstAllowedSlot(UFGInventoryComponent* Inventory, TSubclassOf<UFGItemDescriptor> Item, KBFLFoundSomething &Found, int32 &Index);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to search for
+
+|**TSubclassOf<UFGItemDescriptor>** Item
+|Item what we want
+|===
+
+|===
+|**Output** |**Description**
+
+| **KBFLFoundSomething&** Found
+|Enum for we found something (for easy ise switch)
+
+| **int32&** Index
+|Index of the inventory slot where the Item is allowed (return -1 if slot not found)
+|===
+
+## FindAllAllowedSlots
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Inventory/BP_FindAllAllowedSlots.png[BP_FindAllAllowedSlots,150,role=right]
+- find all slots where the item is allowed
+- Can it called by Blueprint: **YES**
+- Blueprint type: **Callable**
+
+### Function
+```cpp
+static void FindAllAllowedSlots(UFGInventoryComponent* Inventory, TSubclassOf<UFGItemDescriptor> Item, KBFLFoundSomething &Found, TArray<int32> &Index);
+```
+
+|===
+|**Input** |**Description**
+
+|**UFGInventoryComponent*** Inventory
+|Inventory where we want to search for
+
+|**TSubclassOf<UFGItemDescriptor>** Item
+|Item what we want
+|===
+
+|===
+|**Output** |**Description**
+
+| **KBFLFoundSomething&** Found
+|Enum for we found something (for easy ise switch)
+
+| **TArray<int32>&** Index
+|Array of indexes that we found (return empty array if there is no slot)
+|===

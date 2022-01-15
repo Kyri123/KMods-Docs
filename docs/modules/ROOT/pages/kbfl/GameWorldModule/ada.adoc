@@ -1,0 +1,30 @@
+= ADA Helper
+
+== What's the ADA Helper?
+
+The ADA helper help you to trigger easier Messages by unlock a schematic or a research tree. By set the Schematic or Tree and the target message to trigger.
+
+
+
+== Using
+
+After setup your xref:kbfl/GameWorldModule/howto.adoc[KBFL GameWorldModule] you have now a `KBFL` section in the details. there is the section `ADAHelper` with 2 variables. Add there in the maps your Schematic / Research Tree and the target message.
+
+- `M ADAMessages Unlock Schematic` is the map for trigger the message form unlocked schematics.
+
+- `M ADAMessages Unlock Research Tree` is the map for trigger the message form unlocked research trees.
+
+== Options
+
+[WARNING]
+====
+This functionality is by default: **Enabled**
+====
+
+You can overwrite the logic when should the ADA should allow triggering by overwrite the function `IsAdaEnable`
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/disableada.png[]
+
+Overwrite Function:
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/OverwriteFunction.png[]

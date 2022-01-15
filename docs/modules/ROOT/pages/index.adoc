@@ -1,0 +1,22 @@
+= KMods
+== Basics
+
+Welcome to the Docs for KMods
+
+- Discord: https://discord.gg/JsJ9XXWS7Q[KMods Discord]
+
+== My Mods
+
+- https://ficsit.app/mod/C6bw9QeqLs9WZ1[Microwave Power]
+- https://ficsit.app/mod/EGKcPRwzqhQqfZ[M.A.R More Alternate Recipes]
+- https://ficsit.app/mod/4WLYCfTTsyRnfj[RSS2 / Really Simple Signs]
+- https://ficsit.app/mod/5pm1Px5MZCtALS[Satisfactory Plus]
+
+- https://ficsit.app/mod/BkPikvTDXoS3vY[Always Night!]
+- https://ficsit.app/mod/9muBparb6nMvpr[All Fluids are Gasses]
+- https://ficsit.app/mod/EGKcPRwzqhQqfZ[Better Packaged Recipes]
+- https://ficsit.app/mod/6CJGt6KPtjNY4n[The Expanding Pocket]
+- https://ficsit.app/mod/DM5DnSogEL6j74[Kyris Blueprint Function library]
+- https://ficsit.app/mod/Dy9nyjM3SG2Sez[Awesome Sink Storage]
+- https://ficsit.app/mod/4ShUZRULqb6gxk[Better Beacon]
+- https://ficsit.app/mod/AhGzxro6ZcTUUM[More Swatch Slots]

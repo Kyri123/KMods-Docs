@@ -1,0 +1,28 @@
+= Customizer: Swatches
+
+== Basic
+
+This system allow us to easily add new Swatches and default swatch groups to the game without do the many overwrite we need for that.
+
+That allow us also to set the default colors for a swatch descriptor (Color Slot)
+
+
+[WARNING]
+====
+This System check all swatches that we register here. +
+If we use an already used slot the game will crash!
+====
+
+== Using
+
+* `M Swatch Description` is the map for trigger the message form unlocked schematics.
+** `M Swatch` is the swatch description where we set the ID for the color slot
+** `M Primary Colour` is the first color for this swatch
+** `M Secondary Colour` is the second color for this swatch
+* `M Swatch Groups` This map bind new swatch groups to a swatch. This groups can use to set a default to custom buildable.
+
+image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Swatch/Swatches.png[]
+
+== Options
+
+You can set when the Customizer Subsystem should call. For this change `M Call Customizer in Phase` (Default is `Initialization`)
