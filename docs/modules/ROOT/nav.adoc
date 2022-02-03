@@ -33,3 +33,5 @@
 *** Customizer System
 **** xref:kbfl/GameWorldModule/Customizer/Materials.adoc[Materials]
 **** xref:kbfl/GameWorldModule/Customizer/Swatches.adoc[Swatches]
+
+* xref:KIconMaker/index.adoc[KIconMaker]
