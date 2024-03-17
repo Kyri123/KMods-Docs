@@ -11,7 +11,7 @@ The Blueprint of this class add some more things and set the data in the Interfa
 If you don't use that the Subsystem don't know everything about you set values.
 ====
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/NewGWM.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/NewGWM.png[]
 
 == change exsisting GameWorldModule
 
@@ -26,4 +26,4 @@ The Blueprint of this class add some more things and set the data in the Interfa
 If you don't use that the Subsystem don't know everything about you set values.
 ====
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/change.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/change.png[]

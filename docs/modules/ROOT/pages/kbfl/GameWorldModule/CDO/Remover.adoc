@@ -24,9 +24,9 @@ There are 3 Types if Content Remover
 You can exclude schematics or recipes.
 ====
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_RecipeRemover.png[]
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_SchematicRemover.png[]
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_TreeRemover.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/CDOHelper_RecipeRemover.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/CDOHelper_SchematicRemover.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/CDOHelper_TreeRemover.png[]
 
 
 
@@ -40,7 +40,7 @@ Select here the base Class and the set the values you want.
 
 Example:
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/direct.png[]
 
 == Create a new CDOHelper
 
@@ -48,4 +48,4 @@ First you need to create a new blueprint class from the parent `KBFL_CDOHelperCl
 
 Now add this class to your GameWorldModule: `MCDOInformation Map` > `select the phase where the CDO should be done` > `M Remove CDO` > `M Class Helper Classes`
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/class.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/class.png[]

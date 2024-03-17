@@ -21,7 +21,7 @@ If we use an already used slot the game will crash!
 ** `M Secondary Colour` is the second color for this swatch
 * `M Swatch Groups` This map bind new swatch groups to a swatch. This groups can use to set a default to custom buildable.
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Swatch/Swatches.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/Swatch/Swatches.png[]
 
 == Options
 

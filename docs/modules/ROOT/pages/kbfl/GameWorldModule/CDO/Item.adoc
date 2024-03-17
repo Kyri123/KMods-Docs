@@ -13,7 +13,7 @@ And the classes where we want to apply this CDO.
 CDO Helper Classes use only SoftObject (so if we select a class that not exists or can lod the CDO will skip)
 ====
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/CDOHelper_Items.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/CDOHelper_Items.png[]
 
 == Create a new CDOHelper instance in parameter
 
@@ -25,7 +25,7 @@ Select here the base Class and the set the values you want.
 
 Example:
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/direct.png[]
 
 == Create a new CDOHelper
 
@@ -33,4 +33,4 @@ First you need to create a new blueprint class from the parent `KBFL_CDOHelperCl
 
 Now add this class to your GameWorldModule: `MCDOInformation Map` > `select the phase where the CDO should be done` > `M Item CDOHelpers` > `M Class Helper Classes`
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/class.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/class.png[]

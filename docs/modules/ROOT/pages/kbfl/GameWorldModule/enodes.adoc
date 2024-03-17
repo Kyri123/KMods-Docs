@@ -17,8 +17,8 @@ This functionality is by default: **Disabled**
 
 To enable Easy Nodes functionality you need to overwrite the function `UseEasyNodes` and return a true value.
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/easyNodes.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/easyNodes.png[]
 
 Overwrite Function:
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/OverwriteFunction.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/OverwriteFunction.png[]

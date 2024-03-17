@@ -1,7 +1,7 @@
 # Blueprint: Items Library
 
 ## GetAllRegisteredDescWithInfos
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Items/BP_GetAllRegisteredDescWithInfos.png[BP_GetAllRegisteredDescWithInfos,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Items/BP_GetAllRegisteredDescWithInfos.png[BP_GetAllRegisteredDescWithInfos,150,role=right]
 - Get all inventory desc in game (use the mod content registry)
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**

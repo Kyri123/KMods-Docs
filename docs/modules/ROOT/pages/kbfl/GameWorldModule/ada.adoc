@@ -23,8 +23,8 @@ This functionality is by default: **Enabled**
 
 You can overwrite the logic when should the ADA should allow triggering by overwrite the function `IsAdaEnable`
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/disableada.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/disableada.png[]
 
 Overwrite Function:
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/OverwriteFunction.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/OverwriteFunction.png[]

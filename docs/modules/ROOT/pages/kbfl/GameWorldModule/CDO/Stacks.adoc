@@ -13,4 +13,4 @@ CDO Helper Classes use only SoftObject (so if we select a class that not exists 
 
 You only need to add the Item Descriptor to the `MCDOInformation Map` > `select the phase where the CDO should be done` > `m Item Stack Size CDO`
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/CDO/direct.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/CDO/direct.png[]

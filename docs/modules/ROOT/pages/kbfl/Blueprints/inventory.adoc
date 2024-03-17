@@ -1,7 +1,7 @@
 # Blueprint: Inventory Library
 
 ## FindFirstAllowedSlot
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Inventory/BP_FindFirstAllowedSlot.png[BP_FindFirstAllowedSlot,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Inventory/BP_FindFirstAllowedSlot.png[BP_FindFirstAllowedSlot,150,role=right]
 - find the first slot where the item is allowed
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
@@ -32,7 +32,7 @@ static void FindFirstAllowedSlot(UFGInventoryComponent* Inventory, TSubclassOf<U
 |===
 
 ## FindAllAllowedSlots
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Inventory/BP_FindAllAllowedSlots.png[BP_FindAllAllowedSlots,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Inventory/BP_FindAllAllowedSlots.png[BP_FindAllAllowedSlots,150,role=right]
 - find all slots where the item is allowed
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**

@@ -1,7 +1,7 @@
 # C++ Actor Helper
 
 ## ActorsInSphere
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_ActorsInSphere.png[BP_ActorsInSphere,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_ActorHelper/BP_ActorsInSphere.png[BP_ActorsInSphere,150,role=right]
 - Scan for actors of a class in a sphere
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
@@ -40,7 +40,7 @@ static bool ActorsInSphere(UObject* WorldContext, UClass* ActorClass, FVector Lo
 
 
 ## HasFreeLineToActor
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_HasFreeLineToActor.png[BP_HasFreeLineToActor,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_ActorHelper/BP_HasFreeLineToActor.png[BP_HasFreeLineToActor,150,role=right]
 - Fire a line from an actor to another actor and test is there a hit between them
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
@@ -77,7 +77,7 @@ static bool HasFreeLineToActor(UObject* WorldContext, AActor* ActorSource, AActo
 |===
 
 ## HasFreeLineToComponent
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_ActorHelper/BP_HasFreeLineToComponent.png[BP_HasFreeLineToComponent,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_ActorHelper/BP_HasFreeLineToComponent.png[BP_HasFreeLineToComponent,150,role=right]
 - Fire a line from an actor component to another actor component and test is there a hit between them
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**

@@ -2,8 +2,8 @@
 
 == Install KBFL
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/VSGenerate.png[Sunset,250,role=right]
-- To install KBFL download the latest version [HERE](https://gitlab.kmods.de/Kyrium/KBFL/-/releases) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/VSGenerate.png[Sunset,250,role=right]
+- To install KBFL download the latest version [HERE](https://github.com/Satisfactory-KMods/KBFL) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
 - Copy the plugin in your Plugins folder of your SML project
   - `<sml project path>/Plugins/KBFL/`
 - Generate now again the **Visual Studio project files**
@@ -14,7 +14,7 @@ image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/VSGenerate
 
 == Update KBFL
 
-- To Update KBFL download the latest version [HERE](https://gitlab.kmods.de/Kyrium/KBFL/-/releases) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
+- To Update KBFL download the latest version [HERE](https://github.com/Satisfactory-KMods/KBFL) (or clone it direct in `<sml project path>/Plugins/KBFL/`)
 - Overwrite the old KBFL folder
 - Generate now again the **Visual Studio project files**
 - Open `FactoryGame.sln`

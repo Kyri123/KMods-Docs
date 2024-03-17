@@ -7,7 +7,7 @@ Description for parameters are missing!
 ====
 
 ## GetAllRegisteredRecipes
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllRegisteredRecipes.png[BP_GetAllRegisteredRecipes,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllRegisteredRecipes.png[BP_GetAllRegisteredRecipes,150,role=right]
 - Get all recipes in game
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -18,7 +18,7 @@ static TArray<TSubclassOf<UFGRecipe>> GetAllRegisteredRecipes(UObject* WorldCont
 ```
 
 ## GetAllRegisteredRecipesWithInfo
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllRegisteredRecipesWithInfo.png[BP_GetAllRegisteredRecipesWithInfo,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllRegisteredRecipesWithInfo.png[BP_GetAllRegisteredRecipesWithInfo,150,role=right]
 - Get all recipes in game with Infos
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -29,7 +29,7 @@ static TArray<FKBFLRecipeInfo> GetAllRegisteredRecipesWithInfo(UObject* WorldCon
 ```
 
 ## GetAllRecipesFromBuilding
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllRecipesFromBuilding.png[BP_GetAllRecipesFromBuilding,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllRecipesFromBuilding.png[BP_GetAllRecipesFromBuilding,150,role=right]
 - Get all recipes in game from a Building
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -40,7 +40,7 @@ static TArray<TSubclassOf<UFGRecipe>> GetAllRecipesFromBuilding(UObject* WorldCo
 ```
 
 ## GetAllModRecipes
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllModRecipes.png[BP_GetAllModRecipes,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllModRecipes.png[BP_GetAllModRecipes,150,role=right]
 - Get all recipes in game from a Mod
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -51,7 +51,7 @@ static TArray<TSubclassOf<UFGRecipe>> GetAllModRecipes(UObject* WorldContext, FN
 ```
 
 ## GetAllModsRecipes
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllModsRecipes.png[BP_GetAllModsRecipes,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllModsRecipes.png[BP_GetAllModsRecipes,150,role=right]
 - Get all recipes in game from Mods
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -62,7 +62,7 @@ static TArray<TSubclassOf<UFGRecipe>> GetAllModsRecipes(UObject* WorldContext, T
 ```
 
 ## GetAllModsRecipesWithInfo
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_GetAllModsRecipesWithInfo.png[BP_GetAllModsRecipesWithInfo,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_GetAllModsRecipesWithInfo.png[BP_GetAllModsRecipesWithInfo,150,role=right]
 - Get all recipes in game from Mods with Infos from where it from
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -73,7 +73,7 @@ static TArray<FKBFLRecipeInfo> GetAllModsRecipesWithInfo(UObject* WorldContext, 
 ```
 
 ## HasRecipeForm
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_HasRecipeForm.png[BP_HasRecipeForm,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_HasRecipeForm.png[BP_HasRecipeForm,150,role=right]
 - Return has this Recipe a Form in it
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**
@@ -84,7 +84,7 @@ static bool HasRecipeForm(TSubclassOf<UFGRecipe> Recipe, KBFLInOut Side, EResour
 ```
 
 ## CDO_MoveRecipesFromBuilding
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Recipes/BP_CDO_MoveRecipesFromBuilding.png[BP_CDO_MoveRecipesFromBuilding,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Recipes/BP_CDO_MoveRecipesFromBuilding.png[BP_CDO_MoveRecipesFromBuilding,150,role=right]
 - Moves all Recipes from a building to a other
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**

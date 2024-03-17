@@ -13,7 +13,7 @@ That we can change from a new material back with the vanilla one.
 ** `M Valid Buildables` Buildables that we want to add for valid (is usefull if we make new buildabes with mor functionality like Solar Roof)
 ** `M Buildable Map` Buildable and target recipe (Buildable is normal the source what we target and the recipe is that what we want to replace)
 
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/GameWorldModule/Swatch/Materials.png[]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/GameWorldModule/Swatch/Materials.png[]
 
 == Options
 

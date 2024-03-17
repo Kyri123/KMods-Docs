@@ -5,8 +5,7 @@ Welcome to the KBFL Docs!
 
 Here can you find all Information about functions and utils from this Library!
 
-- Latest docs version:  https://gitlab.kmods.de/Kyrium/KBFL/-/releases[1.9.2]
-- Github (Gitlab): https://gitlab.kmods.de/Kyrium/KBFL[https://gitlab.kmods.de/Kyrium/KBFL]
+- Latest docs version:  https://github.com/Satisfactory-KMods/KBFL[1.9.2]
 - Mod padge: https://ficsit.app/mod/DM5DnSogEL6j74[https://ficsit.app/mod/DM5DnSogEL6j74]
 - Latest supported SML: **3.3.0**
 - Satisfactory: **Update 5**

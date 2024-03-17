@@ -7,7 +7,7 @@ Description for parameters are missing!
 ====
 
 ## BindOnWidget
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Widgets/BP_BindOnWidget.png[BP_BindOnWidget,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Widgets/BP_BindOnWidget.png[BP_BindOnWidget,150,role=right]
 - Can Bind a Event what hit on construct a widget from a Class (Contain the widget Object)
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintCallable**
@@ -19,7 +19,7 @@ static void BindOnWidget(const TSubclassOf<UUserWidget> WidgetClass, FOnWidgetCr
 
 
 ## TextToNumbers
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/BP_Widgets/BP_TextToNumbers.png[BP_TextToNumbers,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/BP_Widgets/BP_TextToNumbers.png[BP_TextToNumbers,150,role=right]
 - Convert text to int and float
 - Can it called by Blueprint: **YES**
 - Blueprint type: **BlueprintPure**

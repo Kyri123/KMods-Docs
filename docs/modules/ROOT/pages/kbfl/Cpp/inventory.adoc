@@ -1,7 +1,7 @@
 # C++ Inventory Helper
 
 ## CanStoreItem
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_CanStoreItem.png[BP_CanStoreItem,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_InventoryHelper/BP_CanStoreItem.png[BP_CanStoreItem,150,role=right]
 - This function check if we can store an item in an inventory
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Pure**
@@ -36,7 +36,7 @@ static bool CanStoreItem(UFGInventoryComponent* Inventory, int InvIndex, TSubcla
 
 
 ## StoreItemAmountInInventory
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_StoreItemAmountInInventory.png[BP_StoreItemAmountInInventory,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_InventoryHelper/BP_StoreItemAmountInInventory.png[BP_StoreItemAmountInInventory,150,role=right]
 - This function can Store an Item in an Inventory
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
@@ -63,7 +63,7 @@ static void StoreItemAmountInInventory(UFGInventoryComponent* inventory, int Inv
 |===
 
 ## StoreItemStackInInventory
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_StoreItemStackInInventory.png[BP_StoreItemStackInInventory,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_InventoryHelper/BP_StoreItemStackInInventory.png[BP_StoreItemStackInInventory,150,role=right]
 - This function can Store a Stack in an Inventory
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
@@ -87,7 +87,7 @@ static void StoreItemStackInInventory(UFGInventoryComponent* inventory, int InvI
 |===
 
 ## AddItemsInInventory
-image::https://gitlab.kmods.de/Kyrium/kbfldocs/-/raw/main/docs/Images/CPP_InventoryHelper/BP_AddItemsInInventory.png[BP_AddItemsInInventory,150,role=right]
+image::https://raw.githubusercontent.com/Kyri123/KMods-Docs/master/docs/Images/CPP_InventoryHelper/BP_AddItemsInInventory.png[BP_AddItemsInInventory,150,role=right]
 - This function can Store Items in an Inventory (not using Slot Indexes)
 - Can it called by Blueprint: **YES**
 - Blueprint type: **Callable**
